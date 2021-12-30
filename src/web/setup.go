@@ -4,13 +4,13 @@ import (
 	"github.com/gin-gonic/contrib/static"
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
-	"github.com/mohammadv184/gopayment/drivers"
-	"github.com/mohammadv184/gopayment/drivers/payping"
-	"github.com/mohammadv184/gopayment/drivers/zarinpal"
+	"github.com/mohammadv184/gopayment/gateway"
+	"github.com/mohammadv184/gopayment/gateway/payping"
+	"github.com/mohammadv184/gopayment/gateway/zarinpal"
 	"os"
 )
 
-var Drivers map[string]drivers.Driver
+var Drivers map[string]gateway.Driver
 
 func Init() {
 	godotenv.Load("./.env")
@@ -34,7 +34,7 @@ func Init() {
 }
 
 func registerDrivers() {
-	Drivers = make(map[string]drivers.Driver)
+	Drivers = make(map[string]gateway.Driver)
 	Drivers[payping.Driver{}.GetDriverName()] = &payping.Driver{
 		Token:       os.Getenv("PAYPING_TOKEN"),
 		Description: os.Getenv("PAYPING_DESCRIPTION"),

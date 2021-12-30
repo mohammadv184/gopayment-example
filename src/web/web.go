@@ -3,7 +3,7 @@ package web
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/mohammadv184/gopayment"
-	"github.com/mohammadv184/gopayment/drivers/payping"
+	"github.com/mohammadv184/gopayment/gateway/payping"
 	"log"
 	"net/http"
 )
@@ -60,7 +60,7 @@ func PaymentHandler(c *gin.Context) {
 	setPageAndData(c, gin.H{
 		"page":   "payment",
 		"method": payment.PayMethod(),
-		"payURL": payment.PayUrl(),
+		"payURL": payment.PayURL(),
 	})
 }
 

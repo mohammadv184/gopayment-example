@@ -57,6 +57,8 @@ github.com/modern-go/reflect2 v1.0.2 h1:xBagoLtFs94CBntxluKeaWgTMpvLxC4ur3nMaC9G
 github.com/modern-go/reflect2 v1.0.2/go.mod h1:yWuevngMOJpCy52FWWMvUC8ws7m/LJsjYzDa0/r8luk=
 github.com/mohammadv184/gopayment v1.1.0 h1:x2VmzT/HQnejpeXFP3p9h/riCrv52ajem+4XEZLchoM=
 github.com/mohammadv184/gopayment v1.1.0/go.mod h1:zM5Qu6O694M5sPCOPx5502C1AzejF0datDLicbiRWHg=
+github.com/mohammadv184/gopayment v1.2.0 h1:J/DWm3SvP8DYZBBvIIVD7qyZZ4B6z5GPVr450ENzN1k=
+github.com/mohammadv184/gopayment v1.2.0/go.mod h1:zM5Qu6O694M5sPCOPx5502C1AzejF0datDLicbiRWHg=
 github.com/pkg/diff v0.0.0-20210226163009-20ebb0f2a09e/go.mod h1:pJLUxLENpZxwdsKMEsNbx1VGcRFpLqf3715MtcvvzbA=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
