@@ -1,0 +1,17 @@
+<div class='main-container'>
+  <div class="info">
+    <h1>Select a Gateway</h1>
+    <p>Click to view an interactive example of a PCI-compliant UI integration for online payments.</p>
+  </div>
+  <ul class="integration-list">
+    {{ range $key, $value := .drivers }}
+      <li class="integration-list-item">
+        <a href="/preview/{{ $key }}" class="integration-list-item-link">
+          <div class="title-container">
+            <p class="integration-list-item-title">{{ $key }}</p>
+          </div>
+        </a>
+    </li>
+    {{ end }}
+  </ul>
+</div>
