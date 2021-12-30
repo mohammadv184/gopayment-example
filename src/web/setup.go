@@ -5,6 +5,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 	"github.com/mohammadv184/gopayment/gateway"
+	"github.com/mohammadv184/gopayment/gateway/idpay"
 	"github.com/mohammadv184/gopayment/gateway/payping"
 	"github.com/mohammadv184/gopayment/gateway/zarinpal"
 	"os"
@@ -44,5 +45,11 @@ func registerDrivers() {
 		MerchantID:  os.Getenv("ZARINPAL_MERCHANT_ID"),
 		Description: os.Getenv("ZARINPAL_DESCRIPTION"),
 		Callback:    os.Getenv("ZARINPAL_CALLBACK"),
+	}
+	Drivers[idpay.Driver{}.GetDriverName()] = &idpay.Driver{
+		MerchantID:  os.Getenv("IDPAY_MERCHANT_ID"),
+		Description: os.Getenv("IDPAY_DESCRIPTION"),
+		Callback:    os.Getenv("IDPAY_CALLBACK"),
+		Sandbox:     os.Getenv("IDPAY_SANDBOX") == "true",
 	}
 }

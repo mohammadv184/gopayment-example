@@ -59,6 +59,16 @@ github.com/mohammadv184/gopayment v1.1.0 h1:x2VmzT/HQnejpeXFP3p9h/riCrv52ajem+4X
 github.com/mohammadv184/gopayment v1.1.0/go.mod h1:zM5Qu6O694M5sPCOPx5502C1AzejF0datDLicbiRWHg=
 github.com/mohammadv184/gopayment v1.2.0 h1:J/DWm3SvP8DYZBBvIIVD7qyZZ4B6z5GPVr450ENzN1k=
 github.com/mohammadv184/gopayment v1.2.0/go.mod h1:zM5Qu6O694M5sPCOPx5502C1AzejF0datDLicbiRWHg=
+github.com/mohammadv184/gopayment v1.3.0 h1:XC04mJjTsMtbv4MFTAul2mcsYYTtgKBSI5aYfIKkmd0=
+github.com/mohammadv184/gopayment v1.3.0/go.mod h1:zM5Qu6O694M5sPCOPx5502C1AzejF0datDLicbiRWHg=
+github.com/mohammadv184/gopayment v1.3.1 h1:rpxxho5VWcnxn0NdWDZChBNNC4fRD6Oo9YYLAFfKYj4=
+github.com/mohammadv184/gopayment v1.3.1/go.mod h1:zM5Qu6O694M5sPCOPx5502C1AzejF0datDLicbiRWHg=
+github.com/mohammadv184/gopayment v1.3.2 h1:1TplBSZnHdeB3CgPPOSQzfpSYWgcDoKtrucu06nf1+c=
+github.com/mohammadv184/gopayment v1.3.2/go.mod h1:zM5Qu6O694M5sPCOPx5502C1AzejF0datDLicbiRWHg=
+github.com/mohammadv184/gopayment v1.3.3 h1:aTCx6C6/GbIsZeo7tvvMgJCL6GuQdGq/ZnoQmjYXKPo=
+github.com/mohammadv184/gopayment v1.3.3/go.mod h1:zM5Qu6O694M5sPCOPx5502C1AzejF0datDLicbiRWHg=
+github.com/mohammadv184/gopayment v1.3.4 h1:KcUN+HTAHw/+dzIgVnToHp9yV/Q4fx0z82SbzVWCupQ=
+github.com/mohammadv184/gopayment v1.3.4/go.mod h1:zM5Qu6O694M5sPCOPx5502C1AzejF0datDLicbiRWHg=
 github.com/pkg/diff v0.0.0-20210226163009-20ebb0f2a09e/go.mod h1:pJLUxLENpZxwdsKMEsNbx1VGcRFpLqf3715MtcvvzbA=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
@@ -87,6 +97,8 @@ golang.org/x/net v0.0.0-20210226172049-e18ecbb05110/go.mod h1:m0MpNAwzfU5UDzcl9v
 golang.org/x/net v0.0.0-20211029224645-99673261e6eb/go.mod h1:9nx3DQGgdP8bBQD5qxJ1jj9UTztislL4KSBs9R2vV5Y=
 golang.org/x/net v0.0.0-20211112202133-69e39bad7dc2 h1:CIJ76btIcR3eFI5EgSo6k1qKw9KJexJuRLI9G7Hp5wE=
 golang.org/x/net v0.0.0-20211112202133-69e39bad7dc2/go.mod h1:9nx3DQGgdP8bBQD5qxJ1jj9UTztislL4KSBs9R2vV5Y=
+golang.org/x/net v0.0.0-20211216030914-fe4d6282115f h1:hEYJvxw1lSnWIl8X9ofsYMklzaDs90JI2az5YMd4fPM=
+golang.org/x/net v0.0.0-20211216030914-fe4d6282115f/go.mod h1:9nx3DQGgdP8bBQD5qxJ1jj9UTztislL4KSBs9R2vV5Y=
 golang.org/x/sys v0.0.0-20190215142949-d0b11bdaac8a/go.mod h1:STP8DvDyc/dI5b8T5hshtkjS+E42TnysNCUPdjciGhY=
 golang.org/x/sys v0.0.0-20190412213103-97732733099d/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/sys v0.0.0-20200116001909-b77594299b42/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=

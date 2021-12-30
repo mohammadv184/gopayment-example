@@ -3,6 +3,7 @@ package web
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/mohammadv184/gopayment"
+	"github.com/mohammadv184/gopayment/gateway/idpay"
 	"github.com/mohammadv184/gopayment/gateway/payping"
 	"log"
 	"net/http"
@@ -92,6 +93,33 @@ func CallBackHandler(c *gin.Context) {
 				receipt.GetDriver() + "\n Date:" + receipt.GetDate().Format("2006-01-02 15:04:05"),
 			"img": "success",
 		})
+	case idpay.Driver{}.GetDriverName():
+		vReq := &idpay.VerifyRequest{
+			RefID: c.PostForm("order_id"),
+			ID:    c.PostForm("id"),
+		}
+		receipt, err := gateway.Verify(vReq)
+		if err != nil {
+			setPageAndData(c, gin.H{
+				"page":   "result",
+				"status": "failed",
+				"msg":    err.Error(),
+				"img":    "failed",
+			})
+			return
+		}
+		cardNum, _ := receipt.GetDetail("cardNumber")
+		hCardNum, _ := receipt.GetDetail("HashedCardNumber")
+		setPageAndData(c, gin.H{
+			"page":   "result",
+			"status": "success",
+			"msg": "Payment is successfully refrenceCode: " +
+				receipt.GetReferenceID() + "\n Driver is: " +
+				receipt.GetDriver() + "\n Date:" + receipt.GetDate().Format("2006-01-02 15:04:05") +
+				"\n Card Number: " + cardNum + "\n Hashed Card Number: " + hCardNum,
+			"img": "success",
+		})
+
 	default:
 		log.Println("Driver not found")
 
