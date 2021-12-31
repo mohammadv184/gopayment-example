@@ -69,6 +69,10 @@ github.com/mohammadv184/gopayment v1.3.3 h1:aTCx6C6/GbIsZeo7tvvMgJCL6GuQdGq/ZnoQ
 github.com/mohammadv184/gopayment v1.3.3/go.mod h1:zM5Qu6O694M5sPCOPx5502C1AzejF0datDLicbiRWHg=
 github.com/mohammadv184/gopayment v1.3.4 h1:KcUN+HTAHw/+dzIgVnToHp9yV/Q4fx0z82SbzVWCupQ=
 github.com/mohammadv184/gopayment v1.3.4/go.mod h1:zM5Qu6O694M5sPCOPx5502C1AzejF0datDLicbiRWHg=
+github.com/mohammadv184/gopayment v1.4.1 h1:kljz9dgYmgtkHWkgwGo3Lrc+wun2ak5UP0GCCtwt6WA=
+github.com/mohammadv184/gopayment v1.4.1/go.mod h1:zM5Qu6O694M5sPCOPx5502C1AzejF0datDLicbiRWHg=
+github.com/mohammadv184/gopayment v1.4.2 h1:zlF164eVf7u3uvkhoPPjcLDGDHnlGR72VYYDShmv2EE=
+github.com/mohammadv184/gopayment v1.4.2/go.mod h1:zM5Qu6O694M5sPCOPx5502C1AzejF0datDLicbiRWHg=
 github.com/pkg/diff v0.0.0-20210226163009-20ebb0f2a09e/go.mod h1:pJLUxLENpZxwdsKMEsNbx1VGcRFpLqf3715MtcvvzbA=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
