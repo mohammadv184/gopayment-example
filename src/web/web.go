@@ -43,11 +43,8 @@ func PreviewHandler(c *gin.Context) {
 func PaymentHandler(c *gin.Context) {
 	log.Println("Loading payment page")
 	payment := gopayment.NewPayment(Drivers[c.Param("driver")])
-	err := payment.Amount(1000)
-	if err != nil {
-		log.Println(err)
-	}
-	err = payment.Purchase()
+	payment.Amount(1000)
+	err := payment.Purchase()
 	if err != nil {
 		setPageAndData(c, gin.H{
 			"page":   "result",
@@ -108,15 +105,14 @@ func CallBackHandler(c *gin.Context) {
 			})
 			return
 		}
-		cardNum, _ := receipt.GetDetail("cardNumber")
-		hCardNum, _ := receipt.GetDetail("HashedCardNumber")
+
 		setPageAndData(c, gin.H{
 			"page":   "result",
 			"status": "success",
 			"msg": "Payment is successfully refrenceCode: " +
 				receipt.GetReferenceID() + "\n Driver is: " +
 				receipt.GetDriver() + "\n Date:" + receipt.GetDate().Format("2006-01-02 15:04:05") +
-				"\n Card Number: " + cardNum + "\n Hashed Card Number: " + hCardNum,
+				"\n Card Number: " + receipt.GetDetail("cardNumber") + "\n Hashed Card Number: " + receipt.GetDetail("HashedCardNumber"),
 			"img": "success",
 		})
 
