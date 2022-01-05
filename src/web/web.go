@@ -43,6 +43,7 @@ func PreviewHandler(c *gin.Context) {
 func PaymentHandler(c *gin.Context) {
 	log.Println("Loading payment page")
 	payment := gopayment.NewPayment(Drivers[c.Param("driver")])
+	payment.Description("Test payment")
 	payment.Amount(1000)
 	err := payment.Purchase()
 	if err != nil {

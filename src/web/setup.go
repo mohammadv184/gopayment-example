@@ -37,19 +37,16 @@ func Init() {
 func registerDrivers() {
 	Drivers = make(map[string]gateway.Driver)
 	Drivers[payping.Driver{}.GetDriverName()] = &payping.Driver{
-		Token:       os.Getenv("PAYPING_TOKEN"),
-		Description: os.Getenv("PAYPING_DESCRIPTION"),
-		Callback:    os.Getenv("PAYPING_CALLBACK"),
+		Token:    os.Getenv("PAYPING_TOKEN"),
+		Callback: os.Getenv("PAYPING_CALLBACK"),
 	}
 	Drivers[zarinpal.Driver{}.GetDriverName()] = &zarinpal.Driver{
-		MerchantID:  os.Getenv("ZARINPAL_MERCHANT_ID"),
-		Description: os.Getenv("ZARINPAL_DESCRIPTION"),
-		Callback:    os.Getenv("ZARINPAL_CALLBACK"),
+		MerchantID: os.Getenv("ZARINPAL_MERCHANT_ID"),
+		Callback:   os.Getenv("ZARINPAL_CALLBACK"),
 	}
 	Drivers[idpay.Driver{}.GetDriverName()] = &idpay.Driver{
-		MerchantID:  os.Getenv("IDPAY_MERCHANT_ID"),
-		Description: os.Getenv("IDPAY_DESCRIPTION"),
-		Callback:    os.Getenv("IDPAY_CALLBACK"),
-		Sandbox:     os.Getenv("IDPAY_SANDBOX") == "true",
+		MerchantID: os.Getenv("IDPAY_MERCHANT_ID"),
+		Callback:   os.Getenv("IDPAY_CALLBACK"),
+		Sandbox:    os.Getenv("IDPAY_SANDBOX") == "true",
 	}
 }
