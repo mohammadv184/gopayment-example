@@ -39,7 +39,7 @@ func PreviewHandler(c *gin.Context) {
 	})
 }
 
-// PaymentHandler serves the payment.html page
+// PaymentHandler serves the payment page
 func PaymentHandler(c *gin.Context) {
 	log.Println("Loading payment page")
 	payment := gopayment.NewPayment(Drivers[c.Param("driver")])
@@ -55,12 +55,11 @@ func PaymentHandler(c *gin.Context) {
 		})
 		return
 	}
-
-	setPageAndData(c, gin.H{
-		"page":   "payment",
-		"method": payment.PayMethod(),
-		"payURL": payment.PayURL(),
-	})
+	form, err := payment.RenderRedirectForm()
+	if err != nil {
+		log.Println(err)
+	}
+	c.Data(http.StatusOK, "text/html", []byte(form))
 }
 
 // CallBackHandler serves the result.html page
