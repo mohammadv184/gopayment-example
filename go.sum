@@ -81,6 +81,10 @@ github.com/mohammadv184/gopayment v1.7.0 h1:N2dU/KunkG3qAgAJluCjlXBVA4gh4DX3GWPX
 github.com/mohammadv184/gopayment v1.7.0/go.mod h1:GffXRlVzH+eAFRRiONIXR3kg7/a/YZlgqIRtT7NSTXA=
 github.com/mohammadv184/gopayment v1.7.1 h1:IyRHhvM+ZFdrf59El+/LznBhTmnwkbVrMFqimuSItGU=
 github.com/mohammadv184/gopayment v1.7.1/go.mod h1:GffXRlVzH+eAFRRiONIXR3kg7/a/YZlgqIRtT7NSTXA=
+github.com/mohammadv184/gopayment v1.7.2-0.20220111093952-da2e95c59d1c h1:B6V8wUB7Re8pD/2WUXFV2iIRXDYEqpAsjsUmGM//rg8=
+github.com/mohammadv184/gopayment v1.7.2-0.20220111093952-da2e95c59d1c/go.mod h1:GffXRlVzH+eAFRRiONIXR3kg7/a/YZlgqIRtT7NSTXA=
+github.com/mohammadv184/gopayment v1.8.0 h1:JNTtFb/zY3CkJ5bIRrUZ68tpz1gwDWf5vb+1dAHu8HQ=
+github.com/mohammadv184/gopayment v1.8.0/go.mod h1:GffXRlVzH+eAFRRiONIXR3kg7/a/YZlgqIRtT7NSTXA=
 github.com/pkg/diff v0.0.0-20210226163009-20ebb0f2a09e/go.mod h1:pJLUxLENpZxwdsKMEsNbx1VGcRFpLqf3715MtcvvzbA=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
@@ -113,6 +117,8 @@ golang.org/x/net v0.0.0-20211216030914-fe4d6282115f h1:hEYJvxw1lSnWIl8X9ofsYMklz
 golang.org/x/net v0.0.0-20211216030914-fe4d6282115f/go.mod h1:9nx3DQGgdP8bBQD5qxJ1jj9UTztislL4KSBs9R2vV5Y=
 golang.org/x/net v0.0.0-20220107192237-5cfca573fb4d h1:62NvYBuaanGXR2ZOfwDFkhhl6X1DUgf8qg3GuQvxZsE=
 golang.org/x/net v0.0.0-20220107192237-5cfca573fb4d/go.mod h1:9nx3DQGgdP8bBQD5qxJ1jj9UTztislL4KSBs9R2vV5Y=
+golang.org/x/net v0.0.0-20220111093109-d55c255bac03 h1:0FB83qp0AzVJm+0wcIlauAjJ+tNdh7jLuacRYCIVv7s=
+golang.org/x/net v0.0.0-20220111093109-d55c255bac03/go.mod h1:9nx3DQGgdP8bBQD5qxJ1jj9UTztislL4KSBs9R2vV5Y=
 golang.org/x/sys v0.0.0-20190215142949-d0b11bdaac8a/go.mod h1:STP8DvDyc/dI5b8T5hshtkjS+E42TnysNCUPdjciGhY=
 golang.org/x/sys v0.0.0-20190412213103-97732733099d/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/sys v0.0.0-20200116001909-b77594299b42/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=

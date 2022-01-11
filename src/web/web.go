@@ -3,6 +3,7 @@ package web
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/mohammadv184/gopayment"
+	"github.com/mohammadv184/gopayment/gateway/asanpardakht"
 	"github.com/mohammadv184/gopayment/gateway/idpay"
 	"github.com/mohammadv184/gopayment/gateway/payping"
 	"log"
@@ -94,6 +95,30 @@ func CallBackHandler(c *gin.Context) {
 		vReq := &idpay.VerifyRequest{
 			RefID: c.PostForm("order_id"),
 			ID:    c.PostForm("id"),
+		}
+		receipt, err := gateway.Verify(vReq)
+		if err != nil {
+			setPageAndData(c, gin.H{
+				"page":   "result",
+				"status": "failed",
+				"msg":    err.Error(),
+				"img":    "failed",
+			})
+			return
+		}
+
+		setPageAndData(c, gin.H{
+			"page":   "result",
+			"status": "success",
+			"msg": "Payment is successfully refrenceCode: " +
+				receipt.GetReferenceID() + "\n Driver is: " +
+				receipt.GetDriver() + "\n Date:" + receipt.GetDate().Format("2006-01-02 15:04:05") +
+				"\n Card Number: " + receipt.GetDetail("cardNumber") + "\n Hashed Card Number: " + receipt.GetDetail("HashedCardNumber"),
+			"img": "success",
+		})
+	case asanpardakht.Driver{}.GetDriverName():
+		vReq := &asanpardakht.VerifyRequest{
+			InvoiceID: c.Query("order_id"),
 		}
 		receipt, err := gateway.Verify(vReq)
 		if err != nil {

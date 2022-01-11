@@ -5,6 +5,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 	"github.com/mohammadv184/gopayment/gateway"
+	"github.com/mohammadv184/gopayment/gateway/asanpardakht"
 	"github.com/mohammadv184/gopayment/gateway/idpay"
 	"github.com/mohammadv184/gopayment/gateway/payping"
 	"github.com/mohammadv184/gopayment/gateway/zarinpal"
@@ -48,5 +49,11 @@ func registerDrivers() {
 		MerchantID: os.Getenv("IDPAY_MERCHANT_ID"),
 		Callback:   os.Getenv("IDPAY_CALLBACK"),
 		Sandbox:    os.Getenv("IDPAY_SANDBOX") == "true",
+	}
+	Drivers[asanpardakht.Driver{}.GetDriverName()] = &asanpardakht.Driver{
+		MerchantConfigID: os.Getenv("ASANPARDAKHT_MERCHANT_CONFIG_ID"),
+		Callback:         os.Getenv("ASANPARDAKHT_CALLBACK"),
+		Username:         os.Getenv("ASANPARDAKHT_USERNAME"),
+		Password:         os.Getenv("ASANPARDAKHT_PASSWORD"),
 	}
 }
