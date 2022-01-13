@@ -1,6 +1,6 @@
 package main
 
-import "gopayment-example/src/web"
+import "github.com/mohammadv184/gopayment-example/src/web"
 
 func main() {
 	// Init web app
