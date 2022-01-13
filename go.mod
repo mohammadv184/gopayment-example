@@ -1,4 +1,4 @@
-module gopayment-example
+module github.com/mohammadv184/gopayment-example
 
 go 1.17
 
