@@ -85,6 +85,8 @@ github.com/mohammadv184/gopayment v1.7.2-0.20220111093952-da2e95c59d1c h1:B6V8wU
 github.com/mohammadv184/gopayment v1.7.2-0.20220111093952-da2e95c59d1c/go.mod h1:GffXRlVzH+eAFRRiONIXR3kg7/a/YZlgqIRtT7NSTXA=
 github.com/mohammadv184/gopayment v1.8.0 h1:JNTtFb/zY3CkJ5bIRrUZ68tpz1gwDWf5vb+1dAHu8HQ=
 github.com/mohammadv184/gopayment v1.8.0/go.mod h1:GffXRlVzH+eAFRRiONIXR3kg7/a/YZlgqIRtT7NSTXA=
+github.com/mohammadv184/gopayment v1.9.0 h1:L3K5IOrJ8CrIdkeRJWD/q3/sA5zb+YLa5d/vQ0FSt0Y=
+github.com/mohammadv184/gopayment v1.9.0/go.mod h1:GffXRlVzH+eAFRRiONIXR3kg7/a/YZlgqIRtT7NSTXA=
 github.com/pkg/diff v0.0.0-20210226163009-20ebb0f2a09e/go.mod h1:pJLUxLENpZxwdsKMEsNbx1VGcRFpLqf3715MtcvvzbA=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=

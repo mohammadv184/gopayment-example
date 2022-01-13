@@ -9,6 +9,7 @@ import (
 	"github.com/mohammadv184/gopayment/gateway/idpay"
 	"github.com/mohammadv184/gopayment/gateway/payping"
 	"github.com/mohammadv184/gopayment/gateway/zarinpal"
+	"github.com/mohammadv184/gopayment/gateway/zibal"
 	"os"
 )
 
@@ -29,7 +30,7 @@ func Init() {
 	router.GET("/", IndexHandler)
 	router.GET("/preview/:driver", PreviewHandler)
 	router.GET("/payment/:driver", PaymentHandler)
-	router.POST("/callback/:driver", CallBackHandler)
+	router.Any("/callback/:driver", CallBackHandler)
 
 	// Start and run the server
 	router.Run(":3000")
@@ -55,5 +56,9 @@ func registerDrivers() {
 		Callback:         os.Getenv("ASANPARDAKHT_CALLBACK"),
 		Username:         os.Getenv("ASANPARDAKHT_USERNAME"),
 		Password:         os.Getenv("ASANPARDAKHT_PASSWORD"),
+	}
+	Drivers[zibal.Driver{}.GetDriverName()] = &zibal.Driver{
+		Merchant: os.Getenv("ZIBAL_MERCHANT"),
+		Callback: os.Getenv("ZIBAL_CALLBACK"),
 	}
 }

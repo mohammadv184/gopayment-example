@@ -6,6 +6,7 @@ import (
 	"github.com/mohammadv184/gopayment/gateway/asanpardakht"
 	"github.com/mohammadv184/gopayment/gateway/idpay"
 	"github.com/mohammadv184/gopayment/gateway/payping"
+	"github.com/mohammadv184/gopayment/gateway/zibal"
 	"log"
 	"net/http"
 )
@@ -140,7 +141,30 @@ func CallBackHandler(c *gin.Context) {
 				"\n Card Number: " + receipt.GetDetail("cardNumber") + "\n Hashed Card Number: " + receipt.GetDetail("HashedCardNumber"),
 			"img": "success",
 		})
+	case zibal.Driver{}.GetDriverName():
+		vReq := &zibal.VerifyRequest{
+			TrackID: c.Query("trackId"),
+		}
+		receipt, err := gateway.Verify(vReq)
+		if err != nil {
+			setPageAndData(c, gin.H{
+				"page":   "result",
+				"status": "failed",
+				"msg":    err.Error(),
+				"img":    "failed",
+			})
+			return
+		}
 
+		setPageAndData(c, gin.H{
+			"page":   "result",
+			"status": "success",
+			"msg": "Payment is successfully refrenceCode: " +
+				receipt.GetReferenceID() + "\n Driver is: " +
+				receipt.GetDriver() + "\n Date:" + receipt.GetDate().Format("2006-01-02 15:04:05") +
+				"\n Card Number: " + receipt.GetDetail("cardNumber"),
+			"img": "success",
+		})
 	default:
 		log.Println("Driver not found")
 
