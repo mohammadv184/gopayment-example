@@ -1,6 +1,6 @@
 module github.com/mohammadv184/gopayment-example
 
-go 1.17
+go 1.19
 
 require (
 	github.com/gin-gonic/contrib v0.0.0-20191209060500-d6e26eeaa607

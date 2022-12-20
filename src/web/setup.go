@@ -1,6 +1,9 @@
 package web
 
 import (
+	"log"
+	"os"
+
 	"github.com/gin-gonic/contrib/static"
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
@@ -10,14 +13,12 @@ import (
 	"github.com/mohammadv184/gopayment/gateway/payping"
 	"github.com/mohammadv184/gopayment/gateway/zarinpal"
 	"github.com/mohammadv184/gopayment/gateway/zibal"
-	"os"
 )
 
 var Drivers map[string]gateway.Driver
 
 func Init() {
-	godotenv.Load("./.env")
-
+	_ = godotenv.Load("./.env")
 	registerDrivers()
 	// Set the router as the default one shipped with Gin
 	router := gin.Default()
@@ -33,7 +34,10 @@ func Init() {
 	router.Any("/callback/:driver", CallBackHandler)
 
 	// Start and run the server
-	router.Run(":3000")
+	err := router.Run(":3000")
+	if err != nil {
+		log.Println("Error: ", err)
+	}
 }
 
 func registerDrivers() {
